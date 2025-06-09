@@ -12,7 +12,7 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(({
   label,
   name,
   error,
-  placeholder,
+  placeholder = '',
   ...rest
 }, ref) => {
   return (
@@ -27,7 +27,7 @@ export const TextareaField = forwardRef<HTMLTextAreaElement, Props>(({
         ref={ref}
         {...rest}
         className="w-full min-h-[120px] resize-none px-3 py-[10px] text-sm text-[#293244] border rounded-md border-[#A0A9B8] outline-none
-          hover:border-[#6447CF] focus:border-[#6447CF]"
+          hover:border-[#6447CF] focus:border-[#6447CF] not-placeholder-shown:border-[#6447CF]"
       />
 
       {error && (

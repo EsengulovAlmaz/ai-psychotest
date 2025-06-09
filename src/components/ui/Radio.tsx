@@ -12,6 +12,7 @@ export const Radio = React.forwardRef<HTMLInputElement, Props>(({
   label, 
   value, 
   name,
+  ...rest
 }, ref) => {
   return (
     <label className="flex items-center gap-1 cursor-pointer group">
@@ -21,6 +22,7 @@ export const Radio = React.forwardRef<HTMLInputElement, Props>(({
         name={name}
         value={value}
         className="sr-only peer"
+        {...rest}
       />
       <span
         className={cn(

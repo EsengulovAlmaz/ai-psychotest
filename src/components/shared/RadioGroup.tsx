@@ -1,13 +1,15 @@
 import React from 'react'
-import type { UseFormRegisterReturn } from 'react-hook-form'
+import type { UseFormRegister } from 'react-hook-form'
 
 import { Radio } from '../ui'
 
+import type { QuestionsSurveyTypes } from '../../types'
+
 interface RadioGroupProps {
   options: string[]
-  name: string
+  name: keyof QuestionsSurveyTypes
   label: string
-  register: (name: string) => UseFormRegisterReturn
+  register: UseFormRegister<QuestionsSurveyTypes>
 }
 
 export const RadioGroup: React.FC<RadioGroupProps> = ({ options, name, label, register }) => {
